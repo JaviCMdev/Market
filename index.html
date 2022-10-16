@@ -8,10 +8,17 @@
     <title>Market</title>
     <style>
         .caja{
-            border: solid 5px black;
             height: 300px;
             padding: 30px;
         }
+        #productos{
+            background-image: url("images/market.png");
+            background-size: cover;
+        }
+        #carrito{
+            background-image: url("images/carrito.png");
+            background-size: cover;
+        } 
     </style>
 </head>
 <body>
@@ -21,18 +28,28 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="caja" id="productos">
-                    <img src="images/limon.png" alt="" class="producto">
-                    <img src="images/manzana.png" alt="" class="producto">
-                    <img src="images/naranja.png" alt="" class="producto">
-                    <img src="images/pera.png" alt="" class="producto">
+                    <img src="images/limon.png" alt="" class="producto" id="producto0" data-price="2">
+                    <img src="images/manzana.png" alt="" class="producto" id="producto1" data-price="1.5">
+                    <img src="images/naranja.png" alt="" class="producto" id="producto2" data-price="2.5">
+                    <img src="images/pera.png" alt="" class="producto" id="producto3" data-price="3">
                 </div>
             </div>
         <div class="col-md-6">
-            <div class="caja" id="carrito">
-
-            </div>
+            <div class="caja" id="carrito"></div>
         </div>
     </div>
+    <div class="resumen">
+        <div class="precios">
+            <p>Limon: 2</p>
+            <p>Manzana: 1.5</p>
+            <p>Naranja: 2.5</p>
+            <p>Pera: 3</p>
+        </div>
+        <div class="total">
+            <p>Total compra: </p><p id="shoppingCartTotal">0</p>
+        </div>
+    </div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
